@@ -1,0 +1,46 @@
+.tree-node{
+  position: relative;
+
+}
+.tree-node:before{
+  position: absolute;
+  top: 0;
+  bottom: -4px;
+  margin-inline-start: -1px;
+  border-inline-end: 1px solid #d9d9d9;
+  content: "";
+  height: 1.5rem;
+}
+.tree-node.last-node:before{
+  position: absolute;
+  top: 0;
+  bottom: -4px;
+  margin-inline-start: -1px;
+  border-inline-end: 1px solid #d9d9d9;
+  content: "";
+  height: 0.8rem;
+}
+.tree-node:after{
+  position: absolute;
+  width: 0.5rem;
+  border-bottom: 1px solid #d9d9d9;
+  content: "";
+}
+.node-comment{
+  font-size: 0.8rem;
+  font-style: italic;
+  color: aliceblue;
+  margin-left: 2rem;
+
+}
+.node-comment:before{
+  content: '//';
+  margin-right: 0.5rem;
+}
+.node-name:after{
+  content: attr(data-comment);
+  margin-left: 2rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: darkgrey;
+}

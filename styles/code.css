@@ -1,0 +1,31 @@
+.rehype-code-title {
+  @apply rounded-t bg-gray-700 px-5 py-3 font-mono text-sm font-bold text-gray-200;
+}
+.rehype-code-title + pre[class*='language-'] {
+  @apply mt-0 rounded-t-none;
+}
+.code-line {
+  @apply -mx-2 block border-l-4 border-transparent pl-4 pr-4;
+}
+
+.code-line.inserted {
+  @apply bg-green-500 bg-opacity-20;
+}
+
+.code-line.deleted {
+  @apply bg-red-500 bg-opacity-20;
+}
+
+.highlight-line {
+  @apply -mx-2 border-l-4 border-teal-500  bg-gray-700 bg-opacity-50;
+}
+
+.line-number::before {
+  @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
+  content: attr(line);
+}
+
+.markdown-body .highlight pre, .markdown-body pre {
+
+  background-color: #282a36 !important;
+}
