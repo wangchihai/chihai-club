@@ -1,0 +1,20 @@
+.blog-desc{
+  @apply text-lg text-gray-600
+}
+
+.blog-count-info{
+  @apply mb-2
+}
+
+.blog-count,.blog-last-update{
+  @apply italic mr-10 text-gray-400
+}
+.tag{
+  @apply flex items-center cursor-pointer
+}
+.tag-name{
+  @apply ml-1 mr-4
+}
+.tag-list{
+  @apply flex
+}

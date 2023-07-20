@@ -1,6 +1,18 @@
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
+import React from "react";
+import  './page.css'
+import { AiTwotoneTag } from "react-icons/ai";
+
+function Tag(props:{tag: string}) {
+  return (
+    <Link href={`/?tag=${props.tag}`}><span className={'tag'}>
+      <AiTwotoneTag color={'#ff9988'}/>
+      <span className={'tag-name'}>{props.tag}</span>
+    </span></Link>
+  );
+}
 
 function PostCard(post: Post) {
   console.log(post.tags);
@@ -29,15 +41,27 @@ export default function Home() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
-
+  let tags:string[] =[]
+  tags=posts.reduce((item1,item2)=>{
+    console.log(item1)
+    const tag1 = item1||[]
+    const tag2 = item2.tags||[]
+    return tag1.concat(tag2)
+  },tags)
   return (
-    <div className="max-w-xl py-8 mx-auto">
-      <i className={"iconfont icon-yarn"} />
-      <h1 className="mb-8 text-3xl font-bold text-center">Next.js Example</h1>
-
-      {posts.map((post, idx) => (
-        <PostCard key={idx} {...post} />
-      ))}
+    <div>
+      <div className={'blog-count-info'}>
+        <span className={'blog-count'}>共 {posts.length} 篇博客</span>
+        <span className={'blog-last-update'}>最近更新于 <span>{posts[0].date}</span></span>
+      </div>
+      <div className={'tag-list'}>
+        {
+          Array.from(new Set(tags)).map(item=>{
+            return <Tag key={item} tag={item}></Tag>
+          })
+        }
+      </div>
     </div>
+
   );
 }

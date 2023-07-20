@@ -1,0 +1,17 @@
+.main-header{
+  @apply flex justify-between h-24 items-center
+}
+
+.avatar{
+  @apply w-16 h-16 bg-amber-300 rounded-full
+}
+
+.user-info-wrapper{
+  @apply flex items-center
+}
+.user-info{
+  @apply ml-4
+}
+.user-name-info{
+  @apply font-bold text-3xl text-gray-800
+}
