@@ -24,6 +24,16 @@ const Post = defineDocumentType(() => ({
       description: "标签",
       required: false,
     },
+    cover:{
+      type:'string',
+      description:"封面",
+      required: false,
+    },
+    cardTheme:{
+      type: 'enum',
+      required: false,
+      options:['dark','light']
+    },
     introduction: {
       type: "string",
       description: "简介",

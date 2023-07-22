@@ -2,11 +2,10 @@ import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import Tree from "./../../../components/Tree";
-import { MDXComponents } from "mdx/types";
 import "github-markdown-css/github-markdown-light.css";
 
 
-const mdxComponents: MDXComponents = {
+const mdxComponents = {
   Tree: ({ treeData }) => <Tree treeData={treeData} isRoot={true} />,
 };
 export const generateStaticParams = async () =>

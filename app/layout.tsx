@@ -1,5 +1,4 @@
 import "./globals.css";
-import {Inter} from "next/font/google";
 import "prism-themes/themes/prism-dracula.css";
 import './../styles/main.css'
 import "../styles/code.css";
@@ -25,9 +24,7 @@ export default function RootLayout({
 
     <body>
       <div className={'blog-main'}>
-        <Header>
-
-        </Header>
+        <Header/>
         {children}
       </div>
     </body>

@@ -18,3 +18,52 @@
 .tag-list{
   @apply flex
 }
+.tag{
+  @apply ml-2
+}
+.card{
+  @apply rounded p-4 flex flex-col shadow-xl shadow-gray-300 mb-8 bg-gray-100
+}
+.post-title{
+  @apply text-xl mb-2  font-bold
+}
+.post-introduction{
+  @apply flex-1 mb-2
+}
+.post-time,.tag-con,.tag{
+  @apply text-sm
+}
+
+.card-dark .post-header{
+  @apply text-white
+}
+.card-dark .post-introduction{
+  @apply text-zinc-100 text-ellipsis
+}
+
+.card-dark .post-time{
+  @apply text-gray-50 text-sm
+}
+.card-dark .tag-icon{
+  @apply text-gray-50
+}
+.card-dark .tag{
+  @apply text-gray-50
+}
+
+.card-light .post-header{
+  @apply text-black
+}
+.card-light .post-introduction{
+  @apply text-gray-800 text-ellipsis
+}
+
+.card-light .post-time{
+  @apply text-gray-500
+}
+.card-light .tag-icon{
+  @apply text-gray-500
+}
+.card-light .tag{
+  @apply text-gray-500
+}
