@@ -24,7 +24,9 @@
   @apply mr-4 -ml-2 inline-block w-4 text-right text-gray-400;
   content: attr(line);
 }
-
+.markdown-body{
+  @apply bg-white px-4 py-4 rounded shadow-black
+}
 .markdown-body .highlight pre, .markdown-body pre {
 
   background-color: #282a36 !important;

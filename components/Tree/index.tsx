@@ -167,7 +167,7 @@ export const Tree: FC<ITreeProps> = (props) => {
 
 export const TreeWrapper: FC<ITreeProps> = (props) => {
   return (
-    <div className={"p-2 bg-black text-amber-50 rounded-xl"}>
+    <div className={"p-2 text-amber-50 rounded-xl"} style={{background: '#282A35'}}>
       <Tree treeData={props.treeData} />
     </div>
   );

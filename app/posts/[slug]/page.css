@@ -1,28 +1,9 @@
-.blog-desc{
-  @apply text-lg text-gray-600
+.container{
+  @apply bg-white px-5
 }
 
-.blog-count-info{
-  @apply mb-2
-}
-
-.blog-count,.blog-last-update{
-  @apply italic mr-10 text-gray-400
-}
-.tag{
-  @apply flex items-center cursor-pointer
-}
-.tag-name{
-  @apply ml-1 mr-4
-}
-.tag-list{
-  @apply flex
-}
-.tag{
-  @apply ml-2
-}
-.card{
-  @apply rounded p-4 flex flex-col shadow-xl shadow-gray-300 mb-8 bg-gray-100
+.detail-card{
+  @apply rounded-tl rounded-tr h-28  p-4 flex flex-col shadow-xl shadow-gray-300 bg-gray-100 border-b-black justify-between
 }
 .post-title{
   @apply text-xl mb-2  font-bold cursor-pointer
@@ -33,7 +14,9 @@
 .post-time,.tag-con,.tag{
   @apply text-sm
 }
-
+.tag{
+  @apply ml-2
+}
 .card-dark .post-header{
   @apply text-white
 }

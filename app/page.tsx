@@ -17,7 +17,6 @@ function Tag(props: { tag: string }) {
 }
 
 function PostCard({ post }: { post: Post }) {
-  console.log(post);
 
   let style = {};
   if (post.cover !== undefined) {
@@ -33,7 +32,7 @@ function PostCard({ post }: { post: Post }) {
           <span className="post-header">{post.title}</span>
         </Link>
       </h2>
-      <div className={"post-introduction"}>{"三等奖垃圾袋菲拉斯减肥的；啦世纪东方老师的尽快；"}</div>
+      <div className={"post-introduction"}>{post.introduction}</div>
 
       <div className={"flex justify-between items-center"}>
         <time dateTime={post.date} className="post-time">
